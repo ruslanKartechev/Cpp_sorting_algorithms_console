@@ -1,0 +1,15 @@
+﻿  AlgorithmsTest.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\SortingTester.cpp(43,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\SortingTester.cpp(44,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Logger.cpp
+  SortingTester.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\SortingTester.cpp(43,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\SortingTester.cpp(44,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Utils.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Utils.cpp(10,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\MyFiles\CppCode\AlgorithmsTest\Logger.cpp(38): warning C4717: 'Logger::Log': recursive on all control paths, function will cause runtime stack overflow
+  All 79 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AlgorithmsTest.vcxproj -> C:\MyFiles\CppCode\AlgorithmsTest\x64\Release\AlgorithmsTest.exe

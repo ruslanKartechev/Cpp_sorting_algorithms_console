@@ -1,0 +1,27 @@
+﻿  MergeSorter.cpp
+  InsertionSorter.cpp
+  AlgorithmsTest.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(98,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(113,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(114,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(125,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(126,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(137,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(138,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Logger.cpp
+  BinaryInsertionSorter.cpp
+  PrintTable.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Src\PrintTable.cpp(44,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  SortingTester.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(98,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(113,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(114,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(125,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(126,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(137,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\MyFiles\CppCode\AlgorithmsTest\Src\SortingTester.cpp(138,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  TableColon.cpp
+  Utils.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Src\Utils.cpp(10,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  AlgorithmsTest.vcxproj -> C:\MyFiles\CppCode\AlgorithmsTest\x64\Debug\AlgorithmsTest.exe

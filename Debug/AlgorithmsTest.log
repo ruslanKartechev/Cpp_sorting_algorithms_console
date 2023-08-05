@@ -1,0 +1,3 @@
+﻿  Logger.cpp
+C:\MyFiles\CppCode\AlgorithmsTest\Logger.cpp(1,13): warning C4081: expected 'newline'; found ';'
+  AlgorithmsTest.vcxproj -> C:\MyFiles\CppCode\AlgorithmsTest\Debug\AlgorithmsTest.exe
