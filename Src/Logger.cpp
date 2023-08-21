@@ -31,6 +31,16 @@ Logger::Logger()
 	//	}
 	//}
 
+// 1 blue
+// 2 green
+// 3 cyan 
+// 4 red
+// 5 purple
+// 6 yellow
+// 7 white
+// 8 gray
+// 9 light blue
+
 	void Logger::Log(std::string message) 
 	{ 
 		Logger::mInstance->PrintMessage(message);
@@ -99,17 +109,3 @@ Logger::Logger()
 	{
 		SetConsoleTextAttribute(hConsole, 7);
 	}
-
-	
-
-// 1 blue
-// 2 green
-// 3 cyan 
-// 4 red
-// 5 purple
-// 6 yellow
-// 7 white
-// 8 gray
-// 9 light blue
-
-

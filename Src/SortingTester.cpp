@@ -8,7 +8,7 @@
 #include "BinaryInsertionSorter.h"
 #include "MergeSorter.h"
 #include "PrintTable.h"
-
+#include "BubbleSorter.h"
 
 class SortingTester {	
 public:
@@ -25,7 +25,7 @@ public:
 
 	void Begin()
 	{
-		sorterType = -1;
+		sorterType = 4;
 		RunByKey();
 	}
 
@@ -54,6 +54,9 @@ public:
 		case 3:
 			RunMergingSort();
 			break;
+		case 4:
+			RunBubbleSort();
+			break;
 		default:
 			Logger::Log("Wrong sorter type");
 			break;
@@ -65,8 +68,6 @@ private:
 	int mMinRandom = 1;
 	int mMaxRandom = 100;
 	int sorterType = 1;
-
-#pragma region Common Utilities
 
 	int* MakeRandomIntArr(int length)
 	{
@@ -81,7 +82,6 @@ private:
 		return rand();
 	}
 
-#pragma endregion
 
 	void SortAndPrint(Sorter* sorter, int* arr, int size)
 	{
@@ -133,6 +133,18 @@ private:
 		Logger::Log("\n\n");
 		Logger::LogCyan("Starting Merging Sort");
 		auto* sorter = new MergeSorter();
+		auto size = m_numbersSize;
+		int* arr = MakeRandomIntArr(size);
+		SortAndPrint(sorter, arr, size);
+		delete sorter;
+		delete[] arr;
+	}
+
+	void RunBubbleSort()
+	{
+		Logger::Log("\n\n");
+		Logger::LogCyan("Starting Bubble Sort");
+		auto* sorter = new BubbleSorter();
 		auto size = m_numbersSize;
 		int* arr = MakeRandomIntArr(size);
 		SortAndPrint(sorter, arr, size);

@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\BubbleSorter.cpp" />
     <ClCompile Include="Src\MergeSorter.cpp" />
     <ClCompile Include="Src\InsertionSorter.cpp" />
     <ClCompile Include="Src\AlgorithmsTest.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="Src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Inc\BubbleSorter.h" />
     <ClInclude Include="Inc\Logger.h" />
     <ClInclude Include="Inc\BinaryInsertionSorter.h" />
     <ClInclude Include="Inc\MergeSorter.h" />

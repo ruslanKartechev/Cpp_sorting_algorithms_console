@@ -1,6 +1,6 @@
+#pragma once
 #include "Sorter.h"
 
-#pragma once
 class InsertionSorter : public Sorter
 {
 public:
