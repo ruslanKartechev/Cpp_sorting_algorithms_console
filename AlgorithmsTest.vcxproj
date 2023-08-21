@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\InsertionTesterModule.cpp" />
     <ClCompile Include="Src\BubbleSorter.cpp" />
     <ClCompile Include="Src\MergeSorter.cpp" />
     <ClCompile Include="Src\InsertionSorter.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="Src\BinaryInsertionSorter.cpp" />
     <ClCompile Include="Src\PrintTable.cpp" />
     <ClCompile Include="Src\SortingTester.cpp" />
+    <ClCompile Include="Src\SortingTesterModule.cpp" />
     <ClCompile Include="Src\TableColon.cpp" />
     <ClCompile Include="Src\Utils.cpp" />
   </ItemGroup>
@@ -161,6 +163,8 @@
     <ClInclude Include="Inc\Utils.h" />
     <ClInclude Include="Inc\InsertionSorter.h" />
     <ClInclude Include="Inc\PrintTable.h" />
+    <ClInclude Include="Inc\SortingTesterModule.h" />
+    <ClInclude Include="Inc\InsertionTesterModule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

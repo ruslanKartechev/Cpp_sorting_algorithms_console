@@ -9,6 +9,8 @@
 #include "MergeSorter.h"
 #include "PrintTable.h"
 #include "BubbleSorter.h"
+#include "SortingTesterModule.h"
+#include "InsertionTesterModule.h"
 
 class SortingTester {	
 public:
@@ -16,7 +18,7 @@ public:
 	SortingTester()
 	{
 		srand((unsigned)time(NULL));
-		sorterType = 1;
+		m_insertionModule = new InsertionTesterModule();
 	}
 
 	~SortingTester()
@@ -25,131 +27,64 @@ public:
 
 	void Begin()
 	{
-		sorterType = 4;
-		RunByKey();
-	}
-
-	void RunAll()
-	{
-		RunInsertSort();
-		RunBinaryInsertSort();
-		RunMergingSort();
-	}
-
-	void RunByKey()
-	{
-		switch (sorterType)
-		{
-		case -1 :
-			RunInsertSort();
-			RunBinaryInsertSort();
-			RunMergingSort();
-			break;
-		case 1:
-			RunInsertSort();
-			break;
-		case 2:
-			RunBinaryInsertSort();
-			break;
-		case 3:
-			RunMergingSort();
-			break;
-		case 4:
-			RunBubbleSort();
-			break;
-		default:
-			Logger::Log("Wrong sorter type");
-			break;
-		}
+		RunInputLoop();
 	}
 
 private:
-	const std::size_t m_numbersSize = 50;
-	int mMinRandom = 1;
-	int mMaxRandom = 100;
-	int sorterType = 1;
+	static const int InsertionSortKey = 1;
+	static const int BinaryInsertionSortKey = 2;
+	static const int MergerSortKey = 3;
+	static const int BubbleSortKey = 4;
+	SortingTesterModule* m_insertionModule;
 
-	int* MakeRandomIntArr(int length)
+
+	void RunInputLoop()
 	{
-		int* arr = new int[length];
-		for (int i = 0; i < length; i++)
-			arr[i] = Utils::GetRandRange(mMinRandom, mMaxRandom);
-		return arr;
-	}
+		int inputKey = 10000;
 
-	int GetRandomInt()
-	{
-		return rand();
-	}
-
-
-	void SortAndPrint(Sorter* sorter, int* arr, int size)
-	{
-		PrintTable* table = new PrintTable();
-		table->AddColon(L"Index", 10);
-		table->AddColon(L"Unsorted", 12);
-		table->AddColon(L"Sorted", 12);
-
-		for (int i = 0; i < size; i++)
+		auto ResetKey = [&]()
 		{
-			table->AddLineToColon(L"i: " + std::to_wstring(i), 0);
-			table->AddLineToColon(std::to_wstring(arr[i]), 1);
+			inputKey = 1000;
+		};
+
+		const int returnKey = -1;
+		std::string label = "\nEnter Key For the Sort Algorithm";
+		std::string prompt = std::string("")
+			+ "[" + std::to_string(returnKey) + "]" + "Return\n"
+			+ "[" + std::to_string(InsertionSortKey) + "]" + "Insertion sort\n"
+			+ "[" + std::to_string(BinaryInsertionSortKey) + "]" + "Binary Insertion sort\n"
+			+ "[" + std::to_string(MergerSortKey) + "]" + "Merger sort\n"
+			+ "[" + std::to_string(BubbleSortKey) + "]" + "Bubble sort\n";
+		
+		while (true)
+		{
+			Logger::LogGreen(label);
+			Logger::LogGreen(prompt);
+			std::cin >> inputKey;
+			switch (inputKey)
+			{
+				case InsertionSortKey:
+					m_insertionModule->RunModule();
+					ResetKey();
+					break;
+				case BinaryInsertionSortKey:
+
+					ResetKey();
+					break;
+				case MergerSortKey:
+
+					ResetKey();
+					break;
+				case BubbleSortKey:
+
+					ResetKey();
+					break;
+				case returnKey:
+					return;
+				default:
+					std::cout << "Unknown key ..." << std::endl;
+					break;
+			}
 		}
-		sorter->SortIntegers(arr, m_numbersSize);
-		for (int i = 0; i < size; i++)
-			table->AddLineToColon(std::to_wstring(arr[i]), 2);
-		Logger::LogGreen("Number of steps: " + std::to_string(sorter->GetNumberOfSteps()));
-		table->Print();
-		delete table;
 	}
-
-
-	void RunInsertSort()
-	{
-		Logger::Log("\n");
-		Logger::LogCyan("Starting Insertion Sort");
-		auto* sorter = new InsertionSorter();
-		auto size = m_numbersSize;
-		int* arr = MakeRandomIntArr(size);
-		SortAndPrint(sorter, arr, size);
-		delete sorter;
-		delete[] arr;
-	}
-
-	void RunBinaryInsertSort()
-	{
-		Logger::Log("\n");
-		Logger::LogCyan("Starting Binary Insertion Sort");
-		auto* sorter = new BinaryInsertionSorter();
-		auto size = m_numbersSize;
-		int* arr = MakeRandomIntArr(size);
-		SortAndPrint(sorter, arr, size);
-		delete sorter;
-		delete[] arr;
-	}
-
-	void RunMergingSort()
-	{
-		Logger::Log("\n\n");
-		Logger::LogCyan("Starting Merging Sort");
-		auto* sorter = new MergeSorter();
-		auto size = m_numbersSize;
-		int* arr = MakeRandomIntArr(size);
-		SortAndPrint(sorter, arr, size);
-		delete sorter;
-		delete[] arr;
-	}
-
-	void RunBubbleSort()
-	{
-		Logger::Log("\n\n");
-		Logger::LogCyan("Starting Bubble Sort");
-		auto* sorter = new BubbleSorter();
-		auto size = m_numbersSize;
-		int* arr = MakeRandomIntArr(size);
-		SortAndPrint(sorter, arr, size);
-		delete sorter;
-		delete[] arr;
-	}
-
 };
